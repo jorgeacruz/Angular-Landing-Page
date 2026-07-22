@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+@plugin "daisyui";
 
 @theme {
   --color-blueCap-100: #71d8c5;
@@ -10,4 +11,7 @@
   --color-roseCap-100: #f5506e;
   --color-yellowCap-500: #cdff03;
   --color-purpleCap-100: #976bdb;
+}
+body {
+  background: #fff;
 }

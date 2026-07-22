@@ -1,0 +1,35 @@
+<!-- Como Fazer - Section -->
+<section class="bg-blueCap-200 w-full flex flex-col items-center justify-center md:p-25 p-8">
+  <h1 class="text-yellowCap-500 text-center text-4xl font-bold my-3">Como fazer o Cap Fiador</h1>
+  <p class="text-2xl text-center my-3">
+    O Cap Fiador da Brasilcap agiliza a sua vida na hora de alugar um imóvel.
+  </p>
+  <div
+    class="border border-black max-w-6xl w-full h-46 flex flex-col lg:flex-row items-center justify-center"
+  >
+    <div class="border border-white w-full h-20 flex items-center justify-items-start gap-2">
+      <img src="/assets/images/1.png" alt="" />
+      <p class="text-2xl">Escolha o imóvel ideal para a sua moradia.</p>
+    </div>
+    <div class="border border-white w-full h-20 flex items-center justify-items-start gap-2">
+      <img src="/assets/images/2.png" alt="" />
+      <p class="text-2xl">Selecione a imobiliária mais próxima do local.</p>
+    </div>
+  </div>
+</section>
+<!-- Accordion section -->
+<section class="w-full flex flex-col items-center justify-center p-25 lg:p-35 gap-12">
+  <h1 class="text-blueCap-300 text-4xl font-bold mt-2">Dúvidas Comuns</h1>
+  <div
+    class="w-full max-w-5xl flex flex-col lg:flex-row items-center justify-center md:justify-around gap-2"
+  >
+    <app-accordion-left />
+    <app-accordion-right />
+  </div>
+  <button
+    class="bg-blueCap-300 w-100 p-3 rounded-3xl hover:bg-blueCap-200 hover:scale-105 duration-200"
+  >
+    Ficou com dúvidas? Fale Conosco!
+  </button>
+</section>
+<app-canal-social />
