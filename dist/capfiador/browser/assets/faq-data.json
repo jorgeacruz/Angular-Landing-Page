@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "Quais imóveis posso alugar com o Cap Fiador?",
+    "answer": "O Cap Fiador funciona como garantia para aluguel de imóveis residenciais e comerciais como galpões, lojas de rua ou lojas em shoppings centers."
+  },
+  {
+    "id": 2,
+    "question": "Como comprar um Cap Fiador?",
+    "answer": "O primeiro passo é escolher o imóvel que deseja alugar de acordo com as suas necessidades; depois, busque em nosso site as imobiliárias parceiras em sua região; combine com a imobiliária ou proprietário do imóvel o valor da garantia; realize o pagamento do boleto no valor acordado; retire as chaves do seu imóvel e aproveite o seu novo espaço residencial ou comercial."
+  },
+  {
+    "id": 3,
+    "question": "Quem pode comprar um Cap Fiador?",
+    "answer": "Tanto pessoa física quanto pessoa jurídica podem adquirir o Cap Fiador, se adequando a todos os prazos e os valores de garantia negociados."
+  },
+  {
+    "id": 4,
+    "question": "Quais são os valores de pagamento do Cap Fiador?",
+    "answer": "O valor do Cap Fiador varia de R$ 1.000 a R$ 30.000. Para valores superiores a R$ 30.000 é necessário adquirir mais de um título."
+  },
+  {
+    "id": 5,
+    "question": "O Cap Fiador garante a locação durante todo o contrato do aluguel?",
+    "answer": "Sim. O imóvel fica garantido enquanto durar o contrato e a garantia é reaplicada automaticamente a cada período de vigência do título, com exceção do produto de 30 meses que não é reaplicado e fica caucionado até o fim do contrato de aluguel."
+  },
+  {
+    "id": 6,
+    "question": "Quando o meu Cap Fiador prescreve?",
+    "answer": "Enquanto o Cap Fiador estiver vinculado a um contrato de aluguel não acontece a prescrição. Porém, ao final da vigência do título e estando livre do ônus da garantia, o valor do resgate deve ser pleiteado pelo titular dentro do prazo prescricional de até 5 (cinco) anos, conforme legislação vigente."
+  }
+]
