@@ -1,7 +1,10 @@
 <app-caroussel />
 
 <!-- FORMULÁRIO -->
-<section class="bg-blueCap-300 w-ful flex flex-col items-center justify-center p-8 lg:p-24 gap-12">
+<section
+  id="Contato"
+  class="bg-blueCap-300 w-ful flex flex-col items-center justify-center p-8 lg:p-24 gap-12"
+>
   <div class="w-full max-w-7xl flex items-center justify-center">
     <div class="flex flex-col lg:flex-row items-center justify-around lg:justify-center">
       <img src="/assets/images/smile.png" alt="É pra ser feliz!" />
@@ -19,6 +22,7 @@
 
 <!-- O que é o Cap Fiador -->
 <section
+  id="Capfiador"
   class="w-full bg-roseCap-100 flex flex-col md:flex-row items-center justify-center p-8 lg:p-24"
 >
   <div class="w-full lg:max-w-7xl flex flex-row items-center justify-center md:justify-around">
@@ -56,7 +60,7 @@
 </section>
 
 <!-- VIGENCIAS E SORTEIOS -->
-<section class="w-full flex flex-col justify-center items-center p-8 lg:p-24 gap-16">
+<section id="Vigencias" class="w-full flex flex-col justify-center items-center p-8 lg:p-24 gap-16">
   <div>
     <h1 class="text-blueCap-200 text-center text-4xl font-bold my-3">Vigências e Sorteios</h1>
     <p class="text-black text-xl lg:text-2xl text-center my-3">
@@ -91,8 +95,11 @@
 </section>
 
 <!-- COMO FAZER -->
-<section class="bg-blueCap-200 w-full flex flex-col items-center justify-center md:p-20 p-8">
-  <a href="como-fazer"></a>
+<section
+  id="Fazer"
+  class="bg-blueCap-200 w-full flex flex-col items-center justify-center md:p-20 p-8"
+>
+  <a routerLink="/" fragment="Fazer"></a>
   <h1 class="text-yellowCap-500 text-center text-4xl font-bold my-3">Como fazer o Cap Fiador</h1>
   <p class="text-2xl text-center my-3">
     O Cap Fiador da Brasilcap agiliza a sua vida na hora de alugar um imóvel.
@@ -130,7 +137,7 @@
   </div>
 </section>
 <!-- PERGUNTAS E RESPOSTAS -->
-<section class="w-full flex flex-col items-center justify-center p-25 lg:p-35 gap-12">
+<section id="Duvidas" class="w-full flex flex-col items-center justify-center p-25 lg:p-35 gap-12">
   <h1 class="text-blueCap-300 text-4xl font-bold mt-2">Dúvidas Comuns</h1>
   <div
     class="w-full max-w-5xl flex flex-col lg:flex-row items-center justify-center md:justify-around gap-2"

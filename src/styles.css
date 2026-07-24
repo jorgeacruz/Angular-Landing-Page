@@ -16,3 +16,8 @@ body {
   background: #fff;
   font-family: 'Open Sans', sans-serif;
 }
+
+/* styles.css (global) */
+html {
+  scroll-behavior: smooth;
+}
