@@ -6,6 +6,7 @@ import { Home } from './pages/home/home';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [Menu, Footer, Home],
   templateUrl: './app.html',
   styleUrl: './app.css',
