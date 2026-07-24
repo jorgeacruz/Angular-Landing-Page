@@ -1,16 +1,29 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal, OnInit } from '@angular/core';
 import { Menu } from './components/menu/menu';
 import { Footer } from './components/footer/footer';
 import { Home } from './pages/home/home';
+import { Spiner } from './components/spiner/spiner';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Menu, Footer, Home, RouterOutlet],
+  imports: [Menu, Footer, Home, Spiner],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('CapFiador - A chave para ser Feliz');
+export class App implements OnInit {
+  isLoadingState = signal<boolean>(false);
+
+  ngOnInit() {
+    this.fetchData();
+  }
+
+  fetchData() {
+    this.isLoadingState.set(true);
+    setTimeout(() => {
+      this.isLoadingState.set(false);
+    }, 5000);
+  }
+
+  protected readonly title = signal('Start War - Quizz');
 }
