@@ -1,0 +1,99 @@
+<div
+  class="relative w-full h-auto mx-auto overflow-hidden select-none"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+>
+  <!-- Trilho de slides -->
+  <div
+    class="flex transition-transform duration-700 ease-in-out"
+    [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+  >
+    <div *ngFor="let slide of slides; trackBy: trackBySlideId" class="w-full flex-shrink-0">
+      <!-- aspect-video mantém a proporção 16:9 e a imagem responsiva -->
+      <div class="relative w-full aspect-video bg-slate-100">
+        <!-- Slide com link (externo ou rota interna) -->
+        <a
+          *ngIf="slide.linkUrl; else noLink"
+          [href]="slide.linkUrl"
+          [target]="isExternalLink(slide.linkUrl) && slide.openInNewTab ? '_blank' : '_self'"
+          [attr.rel]="
+            isExternalLink(slide.linkUrl) && slide.openInNewTab ? 'noopener noreferrer' : null
+          "
+          class="block absolute inset-0 w-full h-full"
+        >
+          <img
+            [src]="slide.imageUrl"
+            [alt]="slide.alt"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+
+        <!-- Slide sem link (linkUrl: null) -->
+        <ng-template #noLink>
+          <img
+            [src]="slide.imageUrl"
+            [alt]="slide.alt"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+        </ng-template>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seta anterior -->
+  <button
+    type="button"
+    (click)="previous()"
+    aria-label="Slide anterior"
+    class="carroussel-nav-btn left-2"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="w-5 h-5"
+    >
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+
+  <!-- Seta próxima -->
+  <button
+    type="button"
+    (click)="next()"
+    aria-label="Próximo slide"
+    class="carroussel-nav-btn right-2"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="w-5 h-5"
+    >
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+
+  <!-- Indicadores (dots) -->
+  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
+    <button
+      *ngFor="let slide of slides; let i = index; trackBy: trackBySlideId"
+      type="button"
+      (click)="goTo(i)"
+      [attr.aria-label]="'Ir para o slide ' + (i + 1)"
+      [attr.aria-current]="i === currentIndex"
+      class="carroussel-dot"
+      [class.carroussel-dot-active]="i === currentIndex"
+    ></button>
+  </div>
+</div>
